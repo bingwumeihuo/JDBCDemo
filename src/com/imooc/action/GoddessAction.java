@@ -3,13 +3,12 @@ import com.imooc.dao.GoddessDao;
 import com.imooc.model.Goddess;
 import java.util.Date;
 import java.util.List;
-
 public class GoddessAction {
     public static void main(String[] args) throws Exception {
         GoddessDao g=new GoddessDao();
         List<Goddess> gs=g.query();
         for (Goddess goddess:gs) {
-            //System.out.println(goddess.getUser_name()+","+goddess.getAge());
+            System.out.println(goddess.getUser_name()+","+goddess.getAge());
             Goddess g1=new Goddess();
             g1.setUser_name("小夏");
             g1.setAge(22);

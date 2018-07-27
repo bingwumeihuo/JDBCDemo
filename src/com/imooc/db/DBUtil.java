@@ -13,6 +13,7 @@ public class DBUtil{
             //2.获得数据库的连接
              conn=DriverManager.getConnection(URL, USER, PASSWORD);
             Statement stmt=conn.createStatement();
+            ResultSet rs=stmt.executeQuery("select user_name ,age from imooc_goddess");
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -21,9 +22,13 @@ public class DBUtil{
         }
     }
 
+    public static void main(String[] args) {
+
+    }
     public static Connection getConnection(){
         return conn;
     }
+
 
 
 }
